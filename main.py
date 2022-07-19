@@ -32,7 +32,6 @@ PIPE = 'pipe.png'
 MESSAGE = 'message.png'
 
 
-
 def welcomeScreen():
     """
     Shows welcome images on the screen
@@ -70,13 +69,12 @@ def welcomeScreen():
 
 
 # Game Over
-over_font = pygame.font.Font('freesansbold.ttf', 64)
 
+over_font = pygame.font.Font('freesansbold.ttf', 64)
 
 def game_over_text():
     over_text = over_font.render("GAME OVER", True, (255, 255, 255))
     screen.blit(over_text, (200, 250))
-
 
 def mainGame():
     # ADDING THE BACKGROUND MUSIC
@@ -136,7 +134,6 @@ def mainGame():
             if pipeMidPos <= playerMidPos < pipeMidPos + 4:
                 score += 1
                 print(f"Your score is {score}")
-
 
         if playerVelY < playerMaxVelY and not playerFlapped:
             playerVelY += playerAccY
